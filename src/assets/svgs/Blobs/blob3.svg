@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+  <g>
+    <defs>
+      <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientTransform="matrix(1, 0, 0, -1, 0, 1)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f26a8e"/>
+      <stop offset="1" stop-color="#791630"/>
+    </radialGradient>
+    </defs>
+    <path fill="url(#radial-gradient)">
+    <animate 
+    attributeName='d' 
+    dur='5500ms' 
+    repeatCount='indefinite' 
+    values = 'M332,337.5Q351,425,263,403Q175,381,120,315.5Q65,250,139.5,218.5Q214,187,259.5,171Q305,155,309,202.5Q313,250,332,337.5Z;
+
+    M337,307.5Q316,365,236,389Q156,413,113,331.5Q70,250,122.5,185Q175,120,266,92.5Q357,65,357.5,157.5Q358,250,337,307.5Z;
+
+    M380.5,329Q341,408,262,387.5Q183,367,157.5,308.5Q132,250,144,168.5Q156,87,244.5,96.5Q333,106,376.5,178Q420,250,380.5,329Z;
+
+    M380,291.5Q298,333,230,367.5Q162,402,162,326Q162,250,162,173.5Q162,97,239.5,115Q317,133,389.5,191.5Q462,250,380,291.5Z;
+   
+    M332,337.5Q351,425,263,403Q175,381,120,315.5Q65,250,139.5,218.5Q214,187,259.5,171Q305,155,309,202.5Q313,250,332,337.5Z   
+    '
+    ></animate>
+    </path>
+  </g>
+</svg>

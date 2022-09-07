@@ -1,0 +1,19 @@
+.btn {
+	padding: 8px 10px;
+	background-color: transparent;
+	color: white;
+	letter-spacing: 1px;
+	font-weight: 300;
+	cursor: pointer;
+}
+
+.btn-hire-me {
+	margin-right: 30px;
+	border: 2px solid var(--lightBlueColor);
+	box-shadow: 0 0 7px 1px var(--lightBlueColor);
+}
+
+.btn-download-cv {
+	border: 2px solid var(--lightRedColor);
+	box-shadow: 0 0 7px 1px var(--lightRedColor);
+}

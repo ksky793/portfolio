@@ -1,0 +1,141 @@
+.header-container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 0;
+}
+.header-container::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0e093b36;
+	z-index: 3;
+}
+
+.header-background {
+	display: flex;
+}
+
+.background-left-side,
+.background-right-side {
+	position: relative;
+	z-index: 1;
+}
+.background-left-side {
+	flex-grow: 1;
+	height: 100vh;
+	background-color: var(--darkBlueColor);
+}
+
+.background-right-side {
+	flex-grow: 1.5;
+	height: 100vh;
+	background-color: var(--darkRedColor);
+}
+
+.header-my-image {
+	position: absolute;
+	width: 450px;
+	bottom: 0;
+	left: 40%;
+	transform: translate(-50%, 0);
+	z-index: 2;
+	transition: ease all 1s;
+}
+.header-title {
+	position: absolute;
+	left: 6%;
+	bottom: 310px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: var(--headerTitleColor);
+	z-index: 5;
+	transition: ease all 1s;
+}
+.header-text-container {
+	position: absolute;
+	bottom: 110px;
+	left: 6%;
+	z-index: 5;
+	transition: ease all 1s;
+}
+
+.header-position {
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 200;
+	color: var(--headerPositionColor);
+	transition: ease all 1s;
+	transition-delay: 0.5s;
+}
+.header-description {
+	margin-bottom: 40px;
+	font-size: 16px;
+	font-weight: 200;
+	color: var(--headerDescriptionColor);
+	width: 290px;
+}
+
+@media (min-width: 769px) {
+	.header-my-image {
+		width: 500px;
+		left: 38%;
+	}
+	.header-text-container {
+		left: 64%;
+		bottom: 24%;
+	}
+	.header-title {
+		display: flex;
+		flex-direction: column;
+		bottom: 120px;
+		font-weight: 600;
+		font-size: 64px;
+		letter-spacing: 1px;
+		line-height: 75px;
+	}
+	.header-position {
+		font-size: 34px;
+		font-weight: 300;
+		color: white;
+	}
+	.header-description {
+		color: #fcd5d5;
+	}
+}
+
+@media (min-width: 1025px) {
+	.header-my-image {
+		width: 600px;
+	}
+	.header-text-container {
+		left: 63%;
+		bottom: 30%;
+	}
+	.header-title {
+		font-size: 75px;
+		line-height: 85px;
+	}
+
+	.header-position {
+		font-size: 45px;
+	}
+	.btn-hire-me,
+	.btn-download-cv {
+		font-size: 16px;
+		transition: ease all 0.5s;
+	}
+
+	.btn-hire-me:hover {
+		font-weight: 400;
+		background-color: var(--lightBlueColor);
+	}
+	.btn-download-cv:hover {
+		font-weight: 400;
+		background-color: var(--lightRedColor);
+	}
+}
