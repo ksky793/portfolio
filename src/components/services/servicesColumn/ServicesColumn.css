@@ -1,0 +1,38 @@
+.services-column {
+	width: 100%;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+	padding: 0 30px;
+	background-color: var(--servicesColumnColor);
+	box-shadow: 0 0 15px 1px rgb(10, 10, 62);
+}
+.ic-project-diagram,
+.ic-code,
+.ic-video {
+	font-size: 40px;
+	margin-bottom: 25px;
+}
+.services-column-header {
+	margin-bottom: 15px;
+	font-size: 22px;
+	font-weight: 300;
+	color: white;
+	text-align: center;
+}
+.services-column-paragraph {
+	color: var(--headerDescriptionColor);
+	font-size: 12px;
+	line-height: 25px;
+	letter-spacing: 0.5px;
+	text-align: justify;
+}
+@media (min-width: 769px) {
+	.services-column {
+		width: 220px;
+		height: 400px;
+	}
+}

@@ -9,7 +9,7 @@
 	width: 100%;
 	height: 100vh;
 	text-align: center;
-	background-color: var(--sectionAboutBackground);
+	background-color: var(--lightPurpleBackground);
 	z-index: 0;
 }
 

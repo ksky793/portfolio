@@ -1,0 +1,21 @@
+.section-services {
+	width: 100%;
+	height: 100%;
+	background-color: var(--darkPurpleBackground);
+}
+
+.services-container {
+	text-align: center;
+}
+
+.services-row {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+@media (min-width: 769px) {
+	.services-row {
+		flex-direction: row;
+	}
+}

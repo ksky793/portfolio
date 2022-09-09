@@ -9,18 +9,22 @@
 	--lightRedColor: #ef2958;
 	--lightPurpleColor: #9d98c4;
 
+	--lightPurpleBackground: #1b1543;
+	--darkPurpleBackground: #17123c;
+
 	--headerTitleColor: #ffffff;
 	--headerPositionColor: #cbd3f4;
 	--headerDescriptionColor: #97a1cc;
 
-	--sectionAboutBackground: #17133b;
-
 	--sectionAboutWidth: 300px;
+
+	--servicesColumnColor: #221b52;
 }
 
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -40,9 +44,16 @@ body {
 	transition: color 0.3s ease;
 }
 .ic:hover {
-	color: white;
+	color: rgb(127, 93, 239);
 }
 .wrapper {
 	max-width: 1200px;
-	padding: 0 20px;
+	margin: 0 auto;
+	padding: 100px 40px;
+}
+
+@media (min-width: 1089px) {
+	.wrapper {
+		padding: 100px 70px;
+	}
 }

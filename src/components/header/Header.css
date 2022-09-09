@@ -142,3 +142,9 @@
 		background-color: var(--lightRedColor);
 	}
 }
+
+@media (min-width: 1200px) and (min-height: 1000px) {
+	.header-my-image {
+		width: 770px;
+	}
+}
