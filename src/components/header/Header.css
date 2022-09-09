@@ -99,6 +99,8 @@
 		line-height: 75px;
 	}
 	.header-position {
+		display: flex;
+		flex-direction: column;
 		font-size: 34px;
 		font-weight: 300;
 		color: white;
@@ -110,7 +112,8 @@
 
 @media (min-width: 1025px) {
 	.header-my-image {
-		width: 600px;
+		width: 570px;
+		left: 42%;
 	}
 	.header-text-container {
 		left: 63%;

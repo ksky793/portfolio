@@ -19,7 +19,9 @@ const Header = () => {
 			</h1>
 
 			<div className='header-text-container'>
-				<h2 className='header-position'>Junior Frontend Developer</h2>
+				<h2 className='header-position'>
+					Junior Frontend <span>Developer</span>
+				</h2>
 				<p className='header-description'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magnam
 					quos saepe esse sequi optio ratione corrupti.

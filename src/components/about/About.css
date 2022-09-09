@@ -1,0 +1,99 @@
+.active {
+	display: flex;
+}
+.inactive {
+	display: none;
+}
+.section-about-me {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	background-color: var(--sectionAboutBackground);
+	z-index: 0;
+}
+
+.about-info-container {
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.about-img-info-container {
+	position: relative;
+	/* border: 2px solid green; */
+}
+.about-img-person {
+	width: var(--sectionAboutWidth);
+}
+
+.about-headers-container {
+	width: 100%;
+	position: absolute;
+	bottom: -20px;
+	margin: 0 auto;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.about-upper-header {
+	font-weight: 500;
+	letter-spacing: 1.3px;
+	color: var(--lightRedColor);
+}
+.about-lower-header {
+	font-weight: 400;
+	letter-spacing: 1.3px;
+	font-size: 40px;
+	color: white;
+}
+
+.about-text {
+	width: var(--sectionAboutWidth);
+	margin: 50px auto 20px auto;
+	font-weight: 200;
+	font-size: 14px;
+	line-height: 25px;
+	color: var(--lightPurpleColor);
+}
+.about-icons {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 30px;
+}
+
+.ic-email,
+.ic-github,
+.ic-linkedin {
+	margin: 0 10px;
+}
+
+@media (min-width: 769px) {
+	.active {
+		display: none;
+	}
+	.inactive {
+		display: flex;
+	}
+
+	.about-info-container {
+		display: flex;
+		justify-content: center;
+	}
+	.about-text,
+	.about-headers-container {
+		text-align: left;
+	}
+	.about-headers-container {
+		position: relative;
+	}
+	.about-img-info-container {
+		margin-right: 100px;
+	}
+	.about-icons {
+		bottom: -5px;
+		font-size: 45px;
+	}
+}
