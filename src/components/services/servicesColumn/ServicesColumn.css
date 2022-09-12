@@ -8,7 +8,7 @@
 	margin-bottom: 30px;
 	padding: 0 30px;
 	background-color: var(--servicesColumnColor);
-	box-shadow: 0 0 15px 1px rgb(10, 10, 62);
+	box-shadow: 0 0 15px 1px var(--shadowColor);
 }
 .ic-project-diagram,
 .ic-code,
@@ -34,5 +34,6 @@
 	.services-column {
 		width: 220px;
 		height: 400px;
+		/* align-items: flex-start; */
 	}
 }
