@@ -59,12 +59,6 @@
 	font-size: 30px;
 }
 
-.ic-instagram,
-.ic-github,
-.ic-linkedin {
-	margin: 0 10px;
-}
-
 @media (min-width: 769px) {
 	.about-active {
 		display: none;

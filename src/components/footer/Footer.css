@@ -1,0 +1,45 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 120px;
+	background-color: var(--darkPurpleBackground);
+}
+
+.footer-icons-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ic-instagram,
+.ic-linkedin,
+.ic-github {
+	color: var(--footerColor);
+	margin: 20px;
+	font-size: 20px;
+}
+
+.footer-copyright-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.ic-copyright {
+	color: var(--footerColor);
+	margin-right: 10px;
+	cursor: default;
+}
+.ic-copyright:hover {
+	color: var(--footerColor);
+}
+
+.footer-copyright-container h5 {
+	font-size: 14px;
+	font-weight: 300;
+	color: var(--footerColor);
+}
