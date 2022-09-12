@@ -1,12 +1,12 @@
-import './About.css';
 import personIcon from '../../assets/images/aboutPersonIcon.png';
 import { MdEmail } from 'react-icons/md';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import './About.css';
 
 const About = () => {
 	return (
 		<section className='section-about-me'>
-			<div className='about-info-container'>
+			<div className='wrapper about-info-container'>
 				<div className='about-img-info-container'>
 					<img
 						className='about-img-person'
@@ -17,11 +17,11 @@ const About = () => {
 						<h3 className='about-upper-header'>ABOUT</h3>
 						<h2 className='about-lower-header'>About Me </h2>
 					</div>
-					<div className='about-icons about-inactive'>
-						<MdEmail className='ic ic-email' />
+					{/* <div className='about-icons about-inactive'>
+						<FaInstagram className='ic ic-instagram' />
 						<FaGithub className='ic ic-github' />
 						<FaLinkedin className='ic ic-linkedin' />
-					</div>
+					</div> */}
 				</div>
 
 				<div className='about-text-container'>
@@ -36,11 +36,11 @@ const About = () => {
 						sint amet excepturi minus?
 					</p>
 				</div>
-				<div className='about-icons about-active'>
-					<MdEmail className='ic ic-email' />
+				{/* <div className='about-icons about-active'>
+					<FaInstagram className='ic ic-instagram' />
 					<FaGithub className='ic ic-github' />
 					<FaLinkedin className='ic ic-linkedin' />
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);
