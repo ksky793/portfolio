@@ -13,11 +13,11 @@ const About = () => {
 						src={personIcon}
 						alt='Image Person'
 					></img>
-					<div className='about-headers-container active'>
+					<div className='about-headers-container about-active'>
 						<h3 className='about-upper-header'>ABOUT</h3>
 						<h2 className='about-lower-header'>About Me </h2>
 					</div>
-					<div className='about-icons inactive'>
+					<div className='about-icons about-inactive'>
 						<MdEmail className='ic ic-email' />
 						<FaGithub className='ic ic-github' />
 						<FaLinkedin className='ic ic-linkedin' />
@@ -25,7 +25,7 @@ const About = () => {
 				</div>
 
 				<div className='about-text-container'>
-					<div className='about-headers-container inactive'>
+					<div className='about-headers-container about-inactive'>
 						<h3 className='about-upper-header'>ABOUT</h3>
 						<h2 className='about-lower-header'>About Me </h2>
 					</div>
@@ -36,7 +36,7 @@ const About = () => {
 						sint amet excepturi minus?
 					</p>
 				</div>
-				<div className='about-icons active'>
+				<div className='about-icons about-active'>
 					<MdEmail className='ic ic-email' />
 					<FaGithub className='ic ic-github' />
 					<FaLinkedin className='ic ic-linkedin' />

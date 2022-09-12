@@ -49,7 +49,7 @@
 .header-title {
 	position: absolute;
 	left: 6%;
-	bottom: 310px;
+	bottom: 330px;
 	font-weight: 400;
 	letter-spacing: 1px;
 	color: var(--headerTitleColor);

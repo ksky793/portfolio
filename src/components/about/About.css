@@ -1,7 +1,7 @@
-.active {
+.about-active {
 	display: flex;
 }
-.inactive {
+.about-inactive {
 	display: none;
 }
 .section-about-me {
@@ -71,10 +71,10 @@
 }
 
 @media (min-width: 769px) {
-	.active {
+	.about-active {
 		display: none;
 	}
-	.inactive {
+	.about-inactive {
 		display: flex;
 	}
 
