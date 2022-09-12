@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;700;800&display=swap');
-
 :root {
 	--darkBlueColor: #110c3f;
 	--darkRedColor: #950d32;
 	--lightBlueColor: #5397db;
 	--lightRedColor: #ef2958;
 	--lightPurpleColor: #9d98c4;
+	--veryDarkPurpleColor: #0b062b;
+	--veryLightPurpleColor: #241e4b;
+	--shadowColor: rgb(10, 10, 62);
 
 	--lightPurpleBackground: #1b1543;
 	--darkPurpleBackground: #17123c;
@@ -31,14 +32,15 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.btn {
+.btns {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.btn,
+.btns,
 .ic {
 	cursor: pointer;
 }
+
 .ic {
 	color: var(--lightRedColor);
 	transition: color 0.3s ease;
@@ -50,10 +52,4 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 40px;
-}
-
-@media (min-width: 1089px) {
-	.wrapper {
-		padding: 100px 70px;
-	}
 }

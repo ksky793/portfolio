@@ -9,13 +9,13 @@ const Project = () => {
 			name: 'Portfolio',
 			image: portfolio,
 			websiteUrl: 'www.google.com',
-			githubUrl: 'www.google.com',
+			githubUrl: 'https://github.com/ksky793/portfolio',
 		},
 		{
 			name: 'Netflix Clone',
 			image: netflix,
 			websiteUrl: 'www.google.com',
-			githubUrl: 'www.google.com',
+			githubUrl: 'https://github.com/ksky793/NetflixClone',
 		},
 		// {
 		// 	name: 'Portfolio',
@@ -45,8 +45,16 @@ const Project = () => {
 						<div className='featured-project-text-container'>
 							<h4>{project.name}</h4>
 							<div className='featured-project-sources-buttons'>
-								<button className='btns btn-demo'>DEMO</button>
-								<button className='btns btn-github'>GITHUB</button>
+								<a role='button' className='btns btn-demo'>
+									DEMO
+								</a>
+								<a
+									role='button'
+									href={project.githubUrl}
+									className='btns btn-github'
+								>
+									GITHUB
+								</a>
 							</div>
 						</div>
 					</Carousel.Caption>

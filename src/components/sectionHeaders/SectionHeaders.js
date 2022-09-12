@@ -9,7 +9,7 @@ const sectionHeaders = ({ upperText, lowerText, headersParagraph }) => {
 				marginBottom: upperText === 'PORTFOLIO' && '0px',
 			}}
 		>
-			<h3 className='headers-upper-text'>{upperText}</h3>
+			<h5 className='headers-upper-text'>{upperText}</h5>
 			<h2
 				//condition for featuredprojects section
 				className='headers-lower-text'
