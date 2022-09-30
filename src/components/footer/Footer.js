@@ -3,11 +3,17 @@ import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 import './Footer.css';
 const Footer = () => {
 	return (
-		<footer className='footer'>
+		<footer className='footer' id='footer'>
 			<div className='footer-icons-container'>
-				<FaInstagram className='ic ic-instagram' />
-				<FaLinkedin className='ic ic-linkedin' />
-				<FaGithub className='ic ic-github' />
+				<a href='https://www.instagram.com/k_a_mc_io/'>
+					<FaInstagram className='ic ic-instagram' />
+				</a>
+				<a href='https://www.linkedin.com/in/kamil-świętochowski-3ba9771b9/'>
+					<FaLinkedin className='ic ic-linkedin' />
+				</a>
+				<a href='https://github.com/ksky793?tab=repositories'>
+					<FaGithub className='ic ic-github' />
+				</a>
 			</div>
 			<div className='footer-copyright-container'>
 				<AiOutlineCopyrightCircle className='ic ic-copyright' />
