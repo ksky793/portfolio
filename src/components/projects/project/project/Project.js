@@ -1,6 +1,7 @@
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import netflix from '../../../../assets/images/netflix.png';
 import portfolio from '../../../../assets/images/portfolio.png';
+import notatnik from '../../../../assets/images/notatnik.png';
 import './Project.css';
 import Carousel from 'react-bootstrap/Carousel';
 const Project = () => {
@@ -8,29 +9,22 @@ const Project = () => {
 		{
 			name: 'Portfolio',
 			image: portfolio,
-			websiteUrl: 'www.google.com',
+			websiteUrl: 'https://portfolio-e13cf.web.app',
 			githubUrl: 'https://github.com/ksky793/portfolio',
 		},
 		{
 			name: 'Netflix Clone',
 			image: netflix,
-			websiteUrl: 'www.google.com',
-			githubUrl: 'https://github.com/ksky793/NetflixClone',
+			websiteUrl: 'https://netflix-clone-62010.web.app',
+			githubUrl: 'https://github.com/ksky793/netflix',
 		},
-		// {
-		// 	name: 'Portfolio',
-		// 	image: portfolio,
-		// 	websiteUrl: 'www.google.com',
-		// 	githubUrl: 'www.google.com',
-		// },
-		// {
-		// 	name: 'Portfolio',
-		// 	image: portfolio,
-		// 	websiteUrl: 'www.google.com',
-		// 	githubUrl: 'www.google.com',
-		// },
+		{
+			name: 'CRUD Notes',
+			image: notatnik,
+			websiteUrl: 'https://notes-ef74d.web.app',
+			githubUrl: 'https://github.com/ksky793/notatnik',
+		},
 	];
-	console.log(projects[0].image);
 	return (
 		<Carousel>
 			{projects.map((project, index) => (
@@ -45,12 +39,17 @@ const Project = () => {
 						<div className='featured-project-text-container'>
 							<h4>{project.name}</h4>
 							<div className='featured-project-sources-buttons'>
-								<a role='button' className='btns btn-demo'>
+								<a
+									role='button'
+									href={project.websiteUrl}
+									className='btns btn-demo'
+								>
 									DEMO
 								</a>
 								<a
 									role='button'
 									href={project.githubUrl}
+									target='_blank'
 									className='btns btn-github'
 								>
 									GITHUB
@@ -63,12 +62,4 @@ const Project = () => {
 		</Carousel>
 	);
 };
-
-{
-	/* <img
-									src={project.image}
-									alt={project.name}
-									className='featured-project-image'
-								/> */
-}
 export default Project;
