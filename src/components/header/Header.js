@@ -7,7 +7,7 @@ import Blobs from '../blobs/Blobs';
 
 const Header = () => {
 	return (
-		<header className='header-container'>
+		<header className='header-container' id='header'>
 			<div className='header-background'>
 				<div className='background-left-side'></div>
 				<div className='background-right-side'></div>
@@ -23,8 +23,8 @@ const Header = () => {
 					Junior Frontend <span>Developer</span>
 				</h2>
 				<p className='header-description'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magnam
-					quos saepe esse sequi optio ratione corrupti.
+					I am a beginner frontend developer. I'm looking for a place where I
+					would continue to develop my skills.
 				</p>
 
 				<HireButton />

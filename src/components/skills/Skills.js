@@ -46,8 +46,8 @@ const Skills = () => {
 		// },
 	];
 	return (
-		<section className='section-skills'>
-			<div className='wrapper skills-container'>
+		<section className='section-skills' id='skills'>
+			<div data-aos='fade-up' className='wrapper skills-container'>
 				<SectionHeaders
 					upperText='What Skills I Have'
 					lowerText='My Experience'

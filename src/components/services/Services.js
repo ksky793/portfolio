@@ -11,29 +11,28 @@ const Services = () => {
 		{
 			id: 1,
 			icon: <FaProjectDiagram className='ic ic-project-diagram' />,
-			header: 'UI/UX Design',
+			header: 'Web Design',
 			paragraph:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit exercitationem expedita explicabo eius culpa placeat.',
+				'I have created designs for websites and mobile apps using Adobe XD',
 		},
 		{
 			id: 2,
 			icon: <FaCode className='ic ic-code' />,
 			header: 'Web Development',
 			paragraph:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit exercitationem expedita explicabo eius culpa placeat.',
+				'I have built responsive websites that will work on any device, big or small usually using React JS',
 		},
 		{
 			id: 3,
 			icon: <FaVideo className='ic ic-video' />,
 			header: 'Movie Editing',
-			paragraph:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit exercitationem expedita explicabo eius culpa placeat.',
+			paragraph: 'I have edited some clips using Final Cut Pro',
 		},
 	];
 
 	return (
-		<section className='section-services'>
-			<div className='wrapper services-container'>
+		<section className='section-services' id='services'>
+			<div data-aos='fade-up' className='wrapper services-container'>
 				<SectionHeaders
 					upperText='SERVICES'
 					lowerText='My Services'

@@ -8,32 +8,12 @@ import Project from './project/project/Project';
 
 const Projects = () => {
 	return (
-		<section className='section-featured-projects'>
-			<div className='wrapper featured-projects-container'>
+		<section className='section-featured-projects' id='projects'>
+			<div data-aos='fade-up' className='wrapper featured-projects-container'>
 				<div className='featured-projects-header-container'>
 					<SectionHeaders upperText='PORTFOLIO' lowerText='Featured Projects' />
 					<ViewAllButton />
 				</div>
-				{/* <div className='featured-projects-row'>
-					{projects.map((project, index) => (
-						<Project
-							key={index}
-							name={project.name}
-							image={project.image}
-							websiteUrl={project.websiteUrl}
-							githubUrl={project.githubUrl}
-						/>
-					))}
-				</div> */}
-				{/* {projects.map((project, index) => (
-						<Project
-							key={index}
-							name={project.name}
-							image={project.image}
-							websiteUrl={project.websiteUrl}
-							githubUrl={project.githubUrl}
-						/>
-					))} */}
 				<Project />
 			</div>
 		</section>

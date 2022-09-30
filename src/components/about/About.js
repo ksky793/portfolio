@@ -5,8 +5,8 @@ import './About.css';
 
 const About = () => {
 	return (
-		<section className='section-about-me'>
-			<div className='wrapper about-info-container'>
+		<section className='section-about-me' id='about'>
+			<div data-aos='fade-up' className='wrapper about-info-container'>
 				<div className='about-img-info-container'>
 					<img
 						className='about-img-person'
@@ -17,11 +17,6 @@ const About = () => {
 						<h3 className='about-upper-header'>ABOUT</h3>
 						<h2 className='about-lower-header'>About Me </h2>
 					</div>
-					{/* <div className='about-icons about-inactive'>
-						<FaInstagram className='ic ic-instagram' />
-						<FaGithub className='ic ic-github' />
-						<FaLinkedin className='ic ic-linkedin' />
-					</div> */}
 				</div>
 
 				<div className='about-text-container'>
@@ -30,17 +25,11 @@ const About = () => {
 						<h2 className='about-lower-header'>About Me </h2>
 					</div>
 					<p className='about-text'>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
-						pariatur dolore, obcaecati ex nesciunt accusamus perspiciatis
-						provident ea. Dolor vero quo enim ab quibusdam fugiat, blanditiis
-						sint amet excepturi minus?
+						I'm a student of the Faculty of Computer Science at Bialystok
+						University of Technology. My passion for programming began when |
+						started my High School education and is continued until today.
 					</p>
 				</div>
-				{/* <div className='about-icons about-active'>
-					<FaInstagram className='ic ic-instagram' />
-					<FaGithub className='ic ic-github' />
-					<FaLinkedin className='ic ic-linkedin' />
-				</div> */}
 			</div>
 		</section>
 	);

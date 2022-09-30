@@ -1,11 +1,13 @@
 import { FaFacebookMessenger, FaInstagram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import SectionHeaders from '../sectionHeaders/SectionHeaders';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import './Contact.css';
 const Contact = () => {
 	const form = useRef();
+	const [sent, setSent] = useState(false);
+
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -18,17 +20,18 @@ const Contact = () => {
 			)
 			.then(
 				(result) => {
-					console.log(result.text);
+					setSent(true);
 				},
 				(error) => {
-					console.log(error.text);
+					setSent(false);
 				}
 			);
 		e.target.reset();
 	};
+
 	return (
-		<section className='section-contact-me'>
-			<div className='wrapper contact-container'>
+		<section className='section-contact-me' id='contact'>
+			<div data-aos='fade-up' className='wrapper contact-container'>
 				<SectionHeaders upperText='GET IN TOUCH' lowerText='Contact Me' />
 				<div className='contact-bottom-container'>
 					<div className='contact-left-side'>
@@ -82,6 +85,11 @@ const Contact = () => {
 							<button type='submit' className='btns btn-submit'>
 								Send Message
 							</button>
+							{sent === true && (
+								<p style={{ color: 'white', marginBottom: '0px' }}>
+									Message is sent
+								</p>
+							)}
 						</form>
 					</div>
 				</div>

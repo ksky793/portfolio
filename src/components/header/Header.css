@@ -39,7 +39,8 @@
 
 .header-my-image {
 	position: absolute;
-	width: 450px;
+	width: 50vh;
+	max-width: 550px;
 	bottom: 0;
 	left: 40%;
 	transform: translate(-50%, 0);
@@ -82,7 +83,8 @@
 
 @media (min-width: 769px) {
 	.header-my-image {
-		width: 500px;
+		/* width: 450px; */
+		width: 60vh;
 		left: 38%;
 	}
 	.header-text-container {
@@ -112,7 +114,7 @@
 
 @media (min-width: 1025px) {
 	.header-my-image {
-		width: 570px;
+		width: 70vh;
 		left: 42%;
 	}
 	.header-text-container {
