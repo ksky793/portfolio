@@ -1,6 +1,10 @@
 import '../Buttons.css';
 const HireButton = () => {
-	return <button className='btns btn-hire-me'>HIRE ME</button>;
+	return (
+		<a type='button' href='#contact' className='btns btn-hire-me'>
+			HIRE ME
+		</a>
+	);
 };
 
 export default HireButton;

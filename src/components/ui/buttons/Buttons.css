@@ -4,6 +4,8 @@
 	letter-spacing: 1px;
 	color: white;
 	background-color: transparent;
+	text-decoration: none;
+	transition: ease all 0.3s;
 }
 
 .btn-hire-me {
@@ -21,6 +23,11 @@
 	background-color: var(--darkRedColor);
 	font-weight: 400;
 	padding: 12px;
+}
+.btn-download-cv:hover,
+.btn-hire-me:hover {
+	color: white;
+	font-weight: 300;
 }
 
 .btn-demo {
