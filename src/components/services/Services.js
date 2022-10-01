@@ -36,7 +36,7 @@ const Services = () => {
 				<SectionHeaders
 					upperText='SERVICES'
 					lowerText='My Services'
-					headersParagraph={headersParagraph}
+					// headersParagraph={headersParagraph}
 				/>
 
 				<div className='services-row'>
