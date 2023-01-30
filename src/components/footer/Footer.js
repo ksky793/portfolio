@@ -19,6 +19,7 @@ const Footer = () => {
 				<AiOutlineCopyrightCircle className='ic ic-copyright' />
 				<h5>2022 Kamil Świętochowski</h5>
 			</div>
+			<p className='license'>CC Attribution-NonCommercial 4.0 International</p>
 		</footer>
 	);
 };

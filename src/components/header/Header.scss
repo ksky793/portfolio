@@ -37,10 +37,10 @@ $marginBottomText: 20px;
 		z-index: 1;
 	}
 	.header-text {
+		padding: 100px 40px;
 		position: relative;
 		text-align: left;
 		width: 100%;
-		padding: 100px 40px;
 		color: white;
 		z-index: 2;
 		.header-main-text {
@@ -91,8 +91,11 @@ $marginBottomText: 20px;
 			}
 		}
 		.header-text {
-			flex-shrink: 2;
+			padding: 0;
+			flex-shrink: 1.2;
 			.header-bottom-text {
+				margin-left: 40px;
+				width: 300px;
 				.header-position {
 					font-size: 50px;
 					line-height: 60px;
@@ -106,6 +109,9 @@ $marginBottomText: 20px;
 					width: 300px;
 					margin-bottom: $marginBottomText;
 				}
+			}
+			.header-buttons {
+				margin-left: 40px;
 			}
 		}
 	}

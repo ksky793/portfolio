@@ -1,25 +1,9 @@
 import './SectionHeaders.css';
-const sectionHeaders = ({ upperText, lowerText, headersParagraph }) => {
+const sectionHeaders = ({ upperText, lowerText, textAllign }) => {
 	return (
-		<div
-			className='headers-container'
-			//condition for featuredprojects section
-			style={{
-				textAlign: upperText === 'PORTFOLIO' && 'left',
-				marginBottom: upperText === 'PORTFOLIO' && '0px',
-			}}
-		>
+		<div className='headers-container' style={{ textAlign: textAllign }}>
 			<h5 className='headers-upper-text'>{upperText}</h5>
-			<h2
-				//condition for featuredprojects section
-				className='headers-lower-text'
-				style={{ marginBottom: upperText === 'PORTFOLIO' && '0px' }}
-			>
-				{lowerText}
-			</h2>
-			{headersParagraph && (
-				<p className='services-main-paragraph'>{headersParagraph}</p>
-			)}
+			<h2 className='headers-lower-text'>{lowerText}</h2>
 		</div>
 	);
 };
