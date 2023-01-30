@@ -7,7 +7,7 @@ const Projects = () => {
 		<section className='section-featured-projects' id='projects'>
 			<div data-aos='fade-up' className='wrapper featured-projects-container'>
 				<div className='featured-projects-header-container'>
-					<SectionHeaders upperText='PORTFOLIO' lowerText='Recent Projects' />
+					<SectionHeaders upperText='PORTFOLIO' lowerText='My Projects' />
 				</div>
 				<Project />
 			</div>

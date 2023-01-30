@@ -7,43 +7,45 @@ const Skills = () => {
 			skillName: 'HTML',
 			image:
 				'https://pl.seaicons.com/wp-content/uploads/2015/07/Other-html-5-icon.png',
-			level: '85%',
-			color: '#F16529',
 		},
 		{
 			skillName: 'REACT.JS',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
-			level: '60%',
-			color: '#61DAFB',
 		},
 		{
 			skillName: 'CSS',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png',
-			level: '75%',
-			color: '#2965F1',
 		},
 		{
 			skillName: 'JAVASCRIPT',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png',
-			level: '80%',
-			color: '#F7DF3B',
 		},
 		{
 			skillName: 'TYPESCRIPT',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/1920px-Typescript.svg.png',
-			level: '50%',
-			color: '#61DAFB',
 		},
 		{
 			skillName: 'SQL',
 			image:
-				'https://icon2.cleanpng.com/20180802/fh/kisspng-clip-art-microsoft-azure-sql-database-microsoft-sq-skills-5b63119fad8f06.3803801615332192317109.jpg',
-			level: '50%',
-			color: '#1472C6',
+				'https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Oracle_SQL_Developer_logo.svg/800px-Oracle_SQL_Developer_logo.svg.png',
+		},
+		{
+			skillName: 'ADOBE XD',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/800px-Adobe_XD_CC_icon.svg.png',
+		},
+		{
+			skillName: 'GIT',
+			image: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
+		},
+		{
+			skillName: 'VS CODE',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png',
 		},
 	];
 	return (
@@ -51,7 +53,7 @@ const Skills = () => {
 			<div data-aos='fade-up' className='wrapper skills-container'>
 				<SectionHeaders
 					upperText='What Skills I Have'
-					lowerText='My Experience'
+					lowerText='My Tech Stack'
 				/>
 
 				<div className='skills-icons'>
