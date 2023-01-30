@@ -1,5 +1,5 @@
 .navbar {
-	background: rgba(21, 21, 62, 0.882);
+	background: var(--lightPurpleBackground);
 }
 .navbar-toggler {
 	color: aqua;
