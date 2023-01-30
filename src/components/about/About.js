@@ -25,9 +25,10 @@ const About = () => {
 						<h2 className='about-lower-header'>About Me </h2>
 					</div>
 					<p className='about-text'>
-						I'm a student of the Faculty of Computer Science at Bialystok
-						University of Technology. My passion for programming began when |
-						started my High School education and is continued until today.
+						I'm a last semester student of the Faculty of Computer Science at
+						Bialystok University of Technology. My passion for programming began
+						when I started my High School education and is continued until
+						today.
 					</p>
 				</div>
 			</div>

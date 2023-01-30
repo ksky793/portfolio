@@ -32,18 +32,19 @@ const Skills = () => {
 			color: '#F7DF3B',
 		},
 		{
+			skillName: 'TYPESCRIPT',
+			image:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/1920px-Typescript.svg.png',
+			level: '50%',
+			color: '#61DAFB',
+		},
+		{
 			skillName: 'SQL',
 			image:
 				'https://icon2.cleanpng.com/20180802/fh/kisspng-clip-art-microsoft-azure-sql-database-microsoft-sq-skills-5b63119fad8f06.3803801615332192317109.jpg',
 			level: '50%',
 			color: '#1472C6',
 		},
-		// {
-		// 	skillName: 'ADOBE XD',
-		// 	image: 'https://play-lh.googleusercontent.com/kaox1VteLsWAuNxPxhm8t4llaoyFhxzDjo9g4Hdf92bKdT_Sn6Yrdku6rApuc5ktirw',
-		// 	level: '80%',
-		//     color: '#400935'
-		// },
 	];
 	return (
 		<section className='section-skills' id='skills'>

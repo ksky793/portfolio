@@ -2,6 +2,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import netflix from '../../../../assets/images/netflix.png';
 import portfolio from '../../../../assets/images/portfolio.png';
 import notatnik from '../../../../assets/images/notatnik.png';
+import hotels from '../../../../assets/images/hotels.png';
 import './Project.css';
 import Carousel from 'react-bootstrap/Carousel';
 const Project = () => {
@@ -11,6 +12,12 @@ const Project = () => {
 			image: portfolio,
 			websiteUrl: 'https://portfolio-e13cf.web.app',
 			githubUrl: 'https://github.com/ksky793/portfolio',
+		},
+		{
+			name: 'Hotels',
+			image: hotels,
+			websiteUrl: 'https://noclegi-5b7a2.web.app',
+			githubUrl: 'https://github.com/ksky793/noclegi-app',
 		},
 		{
 			name: 'Netflix Clone',
@@ -43,6 +50,7 @@ const Project = () => {
 									role='button'
 									href={project.websiteUrl}
 									className='btns btn-demo'
+									target='_blank'
 								>
 									DEMO
 								</a>

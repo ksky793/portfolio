@@ -13,18 +13,3 @@
 .featured-project-sources-buttons {
 	display: flex;
 }
-
-/* .featured-projects-row {
-	display: flex;
-	overflow-x: scroll;
-	overflow-y: hidden;
-}
-.featured-projects-row::-webkit-scrollbar {
-	display: none;
-} */
-
-/* .featured-projects-carousel {
-	width: 100%;
-	height: 400px;
-	background-color: rgb(155, 109, 214);
-} */
