@@ -8,10 +8,10 @@
 	--lightPurpleColor: #9d98c4;
 	--veryDarkPurpleColor: #0b062b;
 	--veryLightPurpleColor: #241e4b;
-	--shadowColor: rgb(10, 10, 62);
+	--shadowColor: rgb(9, 9, 34);
 
-	--lightPurpleBackground: #1b1543;
-	--darkPurpleBackground: #17123c;
+	--lightPurpleBackground: #051d38;
+	--darkPurpleBackground: #061229;
 
 	--headerTitleColor: #ffffff;
 	--headerPositionColor: #cbd3f4;
@@ -19,9 +19,9 @@
 
 	--sectionAboutWidth: 300px;
 
-	--servicesColumnColor: #221b52;
+	--servicesColumnColor: #0a2647;
 
-	--footerColor: rgb(53, 45, 126);
+	--footerColor: #204672;
 }
 
 * {

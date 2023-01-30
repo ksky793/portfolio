@@ -4,9 +4,6 @@ import ServicesColumn from './servicesColumn/ServicesColumn';
 import { FaVideo, FaProjectDiagram, FaCode } from 'react-icons/fa';
 
 const Services = () => {
-	const headersParagraph =
-		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi atque aperiam ab sint ad quibusdam sapiente nihil tempore odio laborum tempora';
-
 	const servicesColumns = [
 		{
 			id: 1,
@@ -33,11 +30,7 @@ const Services = () => {
 	return (
 		<section className='section-services' id='services'>
 			<div data-aos='fade-up' className='wrapper services-container'>
-				<SectionHeaders
-					upperText='SERVICES'
-					lowerText='My Services'
-					// headersParagraph={headersParagraph}
-				/>
+				<SectionHeaders upperText='SERVICES' lowerText='My Services' />
 
 				<div className='services-row'>
 					{servicesColumns.map((column) => (

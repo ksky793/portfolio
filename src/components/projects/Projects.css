@@ -6,9 +6,8 @@
 
 .featured-projects-header-container {
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	margin-bottom: 50px;
+	justify-content: center;
+	align-items: center;
 }
 .featured-project-sources-buttons {
 	display: flex;
