@@ -5,7 +5,7 @@ $backgroundDesktopImage: #091524;
 $backgroundColorAfter: rgba(7, 3, 34, 0.399);
 $marginBottomText: 20px;
 
-.header-container {
+.header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -14,7 +14,7 @@ $marginBottomText: 20px;
 	max-height: 800px;
 	position: relative;
 
-	.header-background {
+	&__background {
 		width: 100%;
 		height: 100%;
 		background-image: $backgroundMobileImage;
@@ -36,26 +36,27 @@ $marginBottomText: 20px;
 		background-color: $backgroundColorAfter;
 		z-index: 1;
 	}
-	.header-text {
+	&__main-text {
+		margin-bottom: $marginBottomText;
+		font-size: 38px;
+	}
+	&__text {
 		padding: 100px 40px;
 		position: relative;
 		text-align: left;
 		width: 100%;
 		color: white;
 		z-index: 2;
-		.header-main-text {
-			margin-bottom: $marginBottomText;
-			font-size: 38px;
-		}
-		.header-bottom-text {
-			.header-position {
+
+		&__infos {
+			&__position {
 				margin-bottom: $marginBottomText;
 				font-weight: 300;
 				font-size: 25px;
 				color: #cbd3f4;
 			}
 
-			.header-description {
+			&__description {
 				color: #cbd3f4;
 				margin-bottom: $marginBottomText;
 				font-weight: 200;
@@ -63,40 +64,40 @@ $marginBottomText: 20px;
 				line-height: 30px;
 			}
 		}
-		.header-buttons {
-			margin-top: 40px;
-		}
 	}
+	&__buttons {
+		margin-top: 40px;
+	}
+
 	@include bp(tablet) {
 		background-color: $backgroundDesktopImage;
 		flex-direction: row-reverse;
-		.header-background {
+		&__main-text {
+			font-size: 60px;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			font-weight: 700;
+			color: white;
+			z-index: 2;
+			margin-right: 40px;
+			margin-bottom: 100px;
+			text-align: right;
+		}
+		&__background {
 			position: relative;
 			flex-shrink: 1;
 			display: flex;
 			justify-content: flex-end;
 			align-items: flex-end;
-
-			.header-main-text {
-				font-size: 60px;
-				display: flex;
-				flex-direction: column;
-				position: relative;
-				font-weight: 700;
-				color: white;
-				z-index: 2;
-				margin-right: 40px;
-				margin-bottom: 100px;
-				text-align: right;
-			}
 		}
-		.header-text {
+		&__text {
 			padding: 0;
 			flex-shrink: 1.2;
-			.header-bottom-text {
+			&__infos {
 				margin-left: 40px;
 				width: 300px;
-				.header-position {
+				&__position {
 					font-size: 50px;
 					line-height: 60px;
 					display: flex;
@@ -104,31 +105,29 @@ $marginBottomText: 20px;
 					margin-bottom: $marginBottomText;
 				}
 
-				.header-description {
+				&__description {
 					font-size: 18px;
 					width: 300px;
 					margin-bottom: $marginBottomText;
 				}
 			}
-			.header-buttons {
-				margin-left: 40px;
-			}
+		}
+		&__buttons {
+			margin-left: 40px;
 		}
 	}
 	@include bp(desktop) {
-		.header-background {
-			.header-main-text {
-				font-size: 80px;
-			}
+		&__main-text {
+			font-size: 80px;
 		}
-		.header-text {
-			.header-bottom-text {
-				.header-position {
+		&__text {
+			&__infos {
+				&__position {
 					font-size: 55px;
 					line-height: 70px;
 				}
 
-				.header-description {
+				&__description {
 					font-size: 18px;
 				}
 			}

@@ -1,8 +1,6 @@
 import './Header.scss';
-import myImage from '../../assets/images/headerPhoto-0.33x.png';
 import HireButton from '../ui/buttons/hireButton/HireButton';
 import DownloadButton from '../ui/buttons/downloadButton/DownloadButton';
-import Blobs from '../blobs/Blobs';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
@@ -18,27 +16,27 @@ const Header = () => {
 		};
 	}, []);
 
-	const isMobile = widthSize < 768;
 	const mainText = (
-		<h1 className='header-main-text'>
+		<h1 className='header__main-text'>
 			Hello,<span> I'm Kamil! </span>
 		</h1>
 	);
+	
 	return (
-		<header className='header-container'>
-			<div className='header-background'>{!isMobile && mainText}</div>
-			<div className='header-text'>
-				{isMobile && mainText}
-				<div className='header-bottom-text'>
-					<h2 className='header-position'>
-						Junior Frontend <span>Developer</span>
+		<header className='header'>
+			<div className='header__background'>{widthSize > 768 && mainText}</div>
+			<div className='header__text'>
+				{widthSize < 768 && mainText}
+				<div className='header__text__infos'>
+					<h2 className='header__text__infos__position'>
+						<span>Junior Frontend</span> <span>Developer</span>
 					</h2>
-					<p className='header-description'>
+					<p className='header__text__infos__description'>
 						I am a beginner frontend developer. I'm looking for a place where I
 						would continue to develop my skills.
 					</p>
 				</div>
-				<div className='header-buttons'>
+				<div className='header__buttons'>
 					<HireButton />
 					<DownloadButton />
 				</div>
