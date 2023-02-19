@@ -3,6 +3,7 @@ import netflix from '../../../../assets/images/netflix.png';
 import portfolio from '../../../../assets/images/portfolio.png';
 import notatnik from '../../../../assets/images/notatnik.png';
 import hotels from '../../../../assets/images/hotels.png';
+import ecommerce from '../../../../assets/images/ecommerce.png';
 import './Project.css';
 import Carousel from 'react-bootstrap/Carousel';
 const Project = () => {
@@ -12,6 +13,12 @@ const Project = () => {
 			image: portfolio,
 			websiteUrl: 'https://portfolio-e13cf.web.app',
 			githubUrl: 'https://github.com/ksky793/portfolio',
+		},
+		{
+			name: 'Ecommerce Cleaning Products (in progress)',
+			image: ecommerce,
+			// websiteUrl: 'https://portfolio-e13cf.web.app',
+			githubUrl: 'https://github.com/ksky793/ecommerce-react-redux-firebase',
 		},
 		{
 			name: 'Hotels',
@@ -46,14 +53,23 @@ const Project = () => {
 						<div className='featured-project-text-container'>
 							<h4>{project.name}</h4>
 							<div className='featured-project-sources-buttons'>
-								<a
-									role='button'
-									href={project.websiteUrl}
-									className='btns btn-demo'
-									target='_blank'
-								>
-									DEMO
-								</a>
+								{project.name.includes('Ecommerce') ? (
+									<button
+										className='btns btn-demo'
+										onClick={() => alert('still in progress')}
+									>
+										IN PROGRESS
+									</button>
+								) : (
+									<a
+										role='button'
+										href={project.websiteUrl}
+										className='btns btn-demo'
+										target='_blank'
+									>
+										DEMO
+									</a>
+								)}
 								<a
 									role='button'
 									href={project.githubUrl}

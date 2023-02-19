@@ -4,6 +4,7 @@
 	border-radius: 50%;
 }
 .carousel-caption {
+	width: 50%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -17,6 +18,10 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+}
+.featured-project-sources-buttons {
+	display: flex;
+	justify-content: center;
 }
 
 .featured-project-image {
