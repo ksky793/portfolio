@@ -1,13 +1,13 @@
 @import '../../mixins.scss';
 $backgroundColor: #051d38;
 
-.section-about-me {
+.about {
 	background-color: $backgroundColor;
 	display: flex;
 	flex-direction: column;
 	padding: 100px 40px;
 	position: relative;
-	.about-me-illustration {
+	&__illustration {
 		width: 100%;
 		height: 500px;
 		background-image: url('../../assets/images/headerIllustration.jpg');
@@ -15,11 +15,10 @@ $backgroundColor: #051d38;
 		background-position: 50%;
 	}
 
-	.about-me-text-container {
+	&__container {
 		width: 100%;
-		.about-me-text {
-			margin-top: 40px;
-			.about-text {
+		&__text {
+			&__description {
 				font-weight: 200;
 				color: #c0c3e6;
 				text-align: center;
@@ -30,22 +29,22 @@ $backgroundColor: #051d38;
 	@include bp(tablet) {
 		flex-direction: row;
 		padding: 0;
-		.about-me-illustration {
+		&__illustration {
 			height: 650px;
 			flex-shrink: 1.2;
 			background-position: 50%;
 		}
-		.about-me-text-container {
+		&__container {
 			padding: 0;
 			flex-shrink: 1;
-			.about-me-text {
+			&__text {
 				margin-top: 0;
 				height: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				padding: 40px;
-				.about-text {
+				&__description {
 					text-align: left;
 				}
 			}

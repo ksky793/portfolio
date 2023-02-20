@@ -17,16 +17,16 @@ const About = () => {
 
 	const isMobile = widthSize < 768;
 	return (
-		<section className='section-about-me' id='about'>
-			<div className='about-me-illustration'></div>
-			<div className='about-me-text-container'>
-				<div className='about-me-text'>
+		<section className='about' id='about'>
+			<div className='about__illustration'></div>
+			<div className='about__container'>
+				<div className='about__container__text m-t--40'>
 					<SectionHeaders
 						upperText='ABOUT'
 						lowerText='About Me'
 						textAllign={isMobile ? 'center' : 'left'}
 					/>
-					<p className='about-text'>
+					<p className='about__container__text__description'>
 						I am a student at the last semester of Computer Science at the
 						Faculty of Computer Science at Bialystok University of Technology. I
 						have experience in creating websites using HTML, CSS, Javascript. I
