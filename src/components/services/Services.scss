@@ -1,0 +1,17 @@
+@import '../../mixins.scss';
+.services {
+	width: 100%;
+	height: 100%;
+	background-color: var(--darkPurpleBackground);
+	&__container {
+		&__cards {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			@include bp(tablet) {
+				flex-direction: row;
+			}
+		}
+	}
+}

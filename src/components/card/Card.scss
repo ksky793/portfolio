@@ -1,0 +1,63 @@
+@import '../../mixins.scss';
+
+// variables
+$backgroundColor: #0a2647;
+$backgroundShadowColor: rgb(9, 9, 34);
+$headerColor: rgb(255, 255, 255);
+$descriptionColor: #97a1cc;
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+	background-color: $backgroundColor;
+	box-shadow: 0 0 15px 1px $backgroundShadowColor;
+
+	&--size-services {
+		height: 350px;
+		padding: 0 30px;
+
+		@include bp(tablet) {
+			width: 220px;
+			height: 400px;
+		}
+	}
+	&--size-contact {
+		padding: 30px;
+	}
+
+	&__header {
+		margin-bottom: 15px;
+		font-weight: 300;
+		color: $headerColor;
+		text-align: center;
+
+		&--size-services {
+			font-size: 22px;
+		}
+		&--size-contact {
+			font-size: 22px;
+		}
+	}
+
+	&__paragraph {
+		color: $descriptionColor;
+		text-align: center;
+		line-height: 25px;
+		letter-spacing: 0.5px;
+		font-size: 12px;
+
+		&--size-contact {
+			font-size: 22px;
+		}
+		&--color-contact {
+			color: white;
+		}
+
+		@include bp(tablet) {
+			text-align: justify;
+		}
+	}
+}
