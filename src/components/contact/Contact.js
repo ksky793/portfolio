@@ -1,96 +1,177 @@
-import { FaFacebookMessenger, FaInstagram } from 'react-icons/fa';
+import { FaFacebookMessenger } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import SectionHeaders from '../sectionHeaders/SectionHeaders';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
-import './Contact.css';
+import Card from '../card/Card';
+import Input from '../input/Input';
+import './Contact.scss';
+import { validate, isFormValid } from '../../helpers/validation';
+import SpinningButton from '../ui/buttons/spinningButton/SpinningButton';
+const initialState = {
+	fullName: {
+		value: '',
+		showError: false,
+		error: '',
+		valid: false,
+		rules: ['required'],
+	},
+	email: {
+		value: '',
+		showError: false,
+		error: '',
+		valid: false,
+		rules: ['required', 'email'],
+	},
+	textArea: {
+		value: '',
+		showError: false,
+		error: '',
+		valid: false,
+		rules: ['required', { rule: 'min', length: 25 }],
+	},
+};
+
 const Contact = () => {
-	const form = useRef();
-	const [sent, setSent] = useState(false);
+	const [error, setError] = useState({
+		valid: null,
+		message: '',
+	});
+	const [loading, setLoading] = useState(false);
+	const [form, setForm] = useState({
+		fullName: {
+			value: '',
+			showError: false,
+			error: '',
+			valid: false,
+			rules: ['required'],
+		},
+		email: {
+			value: '',
+			showError: false,
+			error: '',
+			valid: false,
+			rules: ['required', 'email'],
+		},
+		textArea: {
+			value: '',
+			showError: false,
+			error: '',
+			valid: false,
+			rules: ['required', { rule: 'min', length: 25 }],
+		},
+	});
 
-	const sendEmail = (e) => {
+	const changeHandler = (value, fieldName) => {
+		const error = validate(form[fieldName].rules, value);
+		setForm({
+			...form,
+			[fieldName]: {
+				...form[fieldName],
+				error: error,
+				showError: error ? true : false,
+				valid: error ? false : true,
+				value: value,
+			},
+		});
+	};
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-
-		emailjs
-			.sendForm(
-				'service_yl4083v',
-				'template_s4hqntk',
-				form.current,
-				'2SvR_tELXukcGqByS'
-			)
-			.then(
-				(result) => {
-					setSent(true);
-				},
-				(error) => {
-					setSent(false);
-				}
-			);
-		e.target.reset();
+		setLoading(true);
+		const isValid = isFormValid(form);
+		if (isValid) {
+			try {
+				await emailjs.sendForm(
+					'service_yl4083v',
+					'template_s4hqntk',
+					e.target,
+					'2SvR_tELXukcGqByS'
+				);
+				setLoading(false);
+				setForm(initialState);
+			} catch (err) {
+				setError({
+					valid: false,
+					message: err.message,
+				});
+				setLoading(false);
+			}
+		} else {
+			setError({ message: 'Fill in all fields correctly', valid: false });
+			setLoading(false);
+		}
 	};
 
 	return (
-		<section className='section-contact-me' id='contact'>
-			<div data-aos='fade-up' className='wrapper contact-container'>
+		<section className='contact' id='contact'>
+			<div data-aos='fade-up' className='wrapper contact__container'>
 				<SectionHeaders upperText='GET IN TOUCH' lowerText='Contact Me' />
-				<div className='contact-bottom-container'>
-					<div className='contact-left-side'>
-						<div className='contact-icons-container'>
-							<article className='contact-element'>
-								<MdEmail className='ic ic-mail' />
-								<h3>Email</h3>
-								<h4>kamil.swietochowsky@gmail.com</h4>
-								<a href='mailto:kamil.swietochowsky@gmail.com'>
-									Send a message
-								</a>
-							</article>
-							<article className='contact-element'>
-								<FaFacebookMessenger className='ic ic-messenger' />
-								<h3>Messenger</h3>
-								<h4>Kamil Świętochowski</h4>
-								<a href='https://m.me/Kamcioooo' target='_blank'>
-									Send a message
-								</a>
-							</article>
-							{/* <article className='contact-element'>
-								<FaInstagram className='ic ic-instagram' />
-								<h3>Instagram</h3>
-								<h4>k_a_mc_io</h4>
-								<a href='https://www.instagram.com/k_a_mc_io/' target='_blank'>
-									Send a message
-								</a>
-							</article> */}
-						</div>
+				<div className='contact__container__bottom'>
+					<div className='contact__container__bottom__infos'>
+						<Card modifier='contact'>
+							<MdEmail className='ic ic--big m-b--20' />
+							<h3 className='card__header card__header--size-contact'>Email</h3>
+							<h4 className='card__header card__header--services'>
+								kamil.swietochowsky@gmail.com
+							</h4>
+							<a
+								href='mailto:kamil.swietochowsky@gmail.com'
+								className='card__href card__href--color-href'
+							>
+								Send a message
+							</a>
+						</Card>
+						<Card modifier='contact'>
+							<FaFacebookMessenger className='ic ic--big m-b--20' />
+							<h3 className='card__header card__header--size-contact'>
+								Messenger
+							</h3>
+							<h4 className='card__header card__header--services'>
+								Kamil Świętochowski
+							</h4>
+							<a
+								href='https://m.me/Kamcioooo'
+								className='card__href card__href--color-href'
+							>
+								Send a message
+							</a>
+						</Card>
 					</div>
-					<div className='contact-right-side'>
-						<form className='contact-form' ref={form} onSubmit={sendEmail}>
-							<input
+
+					<div className='contact__container__bottom__form'>
+						<form className='form' onSubmit={handleSubmit}>
+							<Input
 								type='text'
 								name='name'
 								placeholder='Your Full Name'
-								required
+								value={form.fullName.value}
+								onChange={(e) => changeHandler(e.target.value, 'fullName')}
+								showError={form.fullName.showError}
+								error={form.fullName.error}
 							/>
-							<input
+							<Input
 								type='email'
 								name='email'
 								placeholder='Your Email'
-								required
+								value={form.email.value}
+								onChange={(e) => changeHandler(e.target.value, 'email')}
+								showError={form.email.showError}
+								error={form.email.error}
 							/>
-							<textarea
+							<Input
+								type='textarea'
 								name='message'
-								rows='7'
 								placeholder='Your Message'
-								required
-							></textarea>
-							<button type='submit' className='btns btn-submit'>
-								Send Message
-							</button>
-							{sent === true && (
-								<p style={{ color: 'white', marginBottom: '0px' }}>
-									Message is sent
-								</p>
-							)}
+								value={form.textArea.value}
+								onChange={(e) => changeHandler(e.target.value, 'textArea')}
+								showError={form.textArea.showError}
+								error={form.textArea.error}
+							/>
+							<SpinningButton loading={loading}>Send a Message</SpinningButton>
 						</form>
+						{!error.valid && (
+							<p className='invalid-feedback'>{error.message}</p>
+						)}
 					</div>
 				</div>
 			</div>

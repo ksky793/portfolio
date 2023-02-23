@@ -1,0 +1,80 @@
+@import '../../mixins.scss';
+
+$backgroundColor: #051d38;
+$invalidFeedbackColor: rgb(204, 71, 71);
+$placeholderColor: rgb(105, 87, 144);
+$textColor: rgb(185, 167, 222);
+.contact {
+	background-color: $backgroundColor;
+
+	&__container {
+		&__bottom {
+			display: flex;
+			flex-direction: column;
+
+			&__infos {
+				display: flex;
+				flex-direction: column;
+				height: 500px;
+				margin-bottom: 30px;
+				justify-content: space-between;
+				@include bp(tablet) {
+					margin-bottom: 0;
+				}
+			}
+
+			&__form {
+				width: 100%;
+
+				@include bp(tablet) {
+					margin-left: 30px;
+				}
+			}
+
+			@include bp(tablet) {
+				flex-direction: row;
+				height: 500px;
+			}
+		}
+	}
+}
+
+.invalid-feedback {
+	display: flex;
+	font-size: 14px;
+	color: $invalidFeedbackColor;
+	margin-top: 10px;
+}
+
+.form {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+.form-control {
+	padding: 20px;
+	background: transparent;
+	color: $textColor;
+	border: 2px solid rgb(105, 87, 144);
+	font-weight: 300;
+	font-size: 16px;
+
+	&:focus {
+		outline: none;
+	}
+	&::placeholder {
+		font-weight: 300;
+		color: $placeholderColor;
+	}
+
+	&--height-big {
+		height: 200px;
+	}
+}

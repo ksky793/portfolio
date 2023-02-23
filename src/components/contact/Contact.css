@@ -1,4 +1,4 @@
-.section-contact-me {
+/* .section-contact-me {
 	background-color: var(--lightPurpleBackground);
 }
 .contact-bottom-container {
@@ -12,17 +12,11 @@
 	justify-content: space-between;
 	padding: 30px;
 	align-items: center;
-	background-color: var(--servicesColumnColor);
+	background-color: #0a2647;
 	color: white;
 }
 .contact-element:nth-child(n) {
 	margin-bottom: 30px;
-}
-
-.ic-mail,
-.ic-messenger {
-	font-size: 30px;
-	margin-bottom: 25px;
 }
 
 .contact-element h3 {
@@ -82,4 +76,4 @@ input:focus {
 	textarea {
 		margin-bottom: 0;
 	}
-}
+} */
