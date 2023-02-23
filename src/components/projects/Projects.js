@@ -4,7 +4,7 @@ import Project from './project/project/Project';
 
 const Projects = () => {
 	return (
-		<section className='section-featured-projects' id='projects'>
+		<section className='section-featured-projects' id='portfolio'>
 			<div data-aos='fade-up' className='wrapper featured-projects-container'>
 				<div className='featured-projects-header-container'>
 					<SectionHeaders upperText='PORTFOLIO' lowerText='My Projects' />

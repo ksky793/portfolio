@@ -1,40 +1,46 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React, { useState } from 'react';
+import './Navbar.scss';
+import { FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
 
-import './Navbar.css';
-const Navbarx = () => {
+const navList = ['home', 'about', 'services', 'skills', 'portfolio', 'contact'];
+
+const Navbar = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleNav = () => {
+		setIsOpen(!isOpen);
+	};
+
+	const handleClickItem = () => {
+		if (isOpen) {
+			setIsOpen(false);
+		}
+	};
+
 	return (
-		<Navbar
-			// bg='light'
-			expand='lg'
-			style={{
-				position: 'fixed',
-				top: '0',
-				left: 0,
-				zIndex: '1000',
-				width: '100%',
-			}}
-			className='navbar'
-		>
-			<Container>
-				<Navbar.Toggle
-					aria-controls='basic-navbar-nav'
-					style={{ border: 'none' }}
-				/>
-				<Navbar.Collapse id='basic-navbar-nav'>
-					<Nav className='me-auto'>
-						<Nav.Link href='#header'>Home</Nav.Link>
-						<Nav.Link href='#about'>About</Nav.Link>
-						<Nav.Link href='#services'>Services</Nav.Link>
-						<Nav.Link href='#skills'>Skills</Nav.Link>
-						<Nav.Link href='#projects'>Portfolio</Nav.Link>
-						<Nav.Link href='#contact'>Contact</Nav.Link>
-					</Nav>
-				</Navbar.Collapse>
-			</Container>
-		</Navbar>
+		<nav className={`navbar`}>
+			<ul className={`navbar__menu ${isOpen ? 'navbar__menu--open' : ''}`}>
+				{navList.map((el, index) => (
+					<li className='navbar__item' onClick={handleClickItem} key={index}>
+						<a href={`#${el}`} className='navbar__link'>
+							{el}
+						</a>
+					</li>
+				))}
+			</ul>
+			<button
+				className={`navbar__toggle ${isOpen ? 'navbar__toggle--open' : ''}`}
+				onClick={toggleNav}
+			>
+				{isOpen ? (
+					<AiOutlineClose className='ic ic--color-white ic--small' />
+				) : (
+					<FaBars className='ic ic--color-white ic--small' />
+				)}
+			</button>
+		</nav>
 	);
 };
 
-export default Navbarx;
+export default Navbar;

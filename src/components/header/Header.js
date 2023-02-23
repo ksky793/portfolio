@@ -21,9 +21,9 @@ const Header = () => {
 			Hello,<span> I'm Kamil! </span>
 		</h1>
 	);
-	
+
 	return (
-		<header className='header'>
+		<header className='header' id='home'>
 			<div className='header__background'>{widthSize > 768 && mainText}</div>
 			<div className='header__text'>
 				{widthSize < 768 && mainText}
