@@ -1,0 +1,87 @@
+$arrowColor: white;
+$arrowHoverColor: rgb(211, 211, 248);
+$dotColor: rgb(157, 153, 153);
+$projectNameColor: white;
+
+.slider {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(14, 14, 14, 0.349);
+	}
+	&__slide {
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		filter: blur(1px);
+		z-index: 1;
+	}
+
+	&__left-arrow,
+	&__right-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		font-size: 40px;
+		cursor: pointer;
+		color: $arrowColor;
+		transition: color 0.2s ease;
+		z-index: 2;
+
+		&:hover {
+			color: $arrowHoverColor;
+		}
+	}
+
+	&__left-arrow {
+		left: 30px;
+	}
+	&__right-arrow {
+		right: 30px;
+	}
+
+	&__dots {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		bottom: 5px;
+		z-index: 2;
+	}
+
+	&__caption {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 4;
+
+		&__name {
+			color: $projectNameColor;
+			font-weight: 500;
+			font-size: 20px;
+		}
+	}
+}
+
+.dot {
+	color: $dotColor;
+	transition: 2s;
+	font-size: 24px;
+	cursor: pointer;
+	margin: 0 3px;
+
+	&--active {
+		color: white;
+		transition: color 0.2s ease;
+	}
+}
