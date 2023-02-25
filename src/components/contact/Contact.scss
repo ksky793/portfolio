@@ -1,11 +1,11 @@
 @import '../../mixins.scss';
+@import '../../variables.scss';
 
-$backgroundColor: #051d38;
 $invalidFeedbackColor: rgb(204, 71, 71);
 $placeholderColor: rgb(105, 87, 144);
 $textColor: rgb(185, 167, 222);
 .contact {
-	background-color: $backgroundColor;
+	background-color: $lightPurpleBackground;
 
 	&__container {
 		&__bottom {

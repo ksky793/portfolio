@@ -1,8 +1,9 @@
 @import '../../mixins.scss';
+@import '../../variables.scss';
 .services {
 	width: 100%;
 	height: 100%;
-	background-color: var(--darkPurpleBackground);
+	background-color: $darkPurpleBackground;
 	&__container {
 		&__cards {
 			display: flex;

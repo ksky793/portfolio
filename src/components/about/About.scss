@@ -1,8 +1,8 @@
 @import '../../mixins.scss';
-$backgroundColor: #051d38;
+@import '../../variables.scss';
 
 .about {
-	background-color: $backgroundColor;
+	background-color: $lightPurpleBackground;
 	display: flex;
 	flex-direction: column;
 	padding: 100px 40px;

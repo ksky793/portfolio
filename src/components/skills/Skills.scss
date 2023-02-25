@@ -1,8 +1,9 @@
+@import '../../variables.scss';
 .skills {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-color: var(--lightPurpleBackground);
+	background-color: $lightPurpleBackground;
 
 	&__icons {
 		display: flex;

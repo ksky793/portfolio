@@ -1,4 +1,3 @@
-import personIcon from '../../assets/images/headerIllustration.jpg';
 import './About.scss';
 import SectionHeaders from '../sectionHeaders/SectionHeaders';
 import { useEffect, useState } from 'react';
