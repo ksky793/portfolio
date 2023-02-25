@@ -60,7 +60,7 @@ const ImageSlider = ({ slides }) => {
 				<div className='slider__caption__buttons m-t--20'>
 					<a
 						href={slides[currentIndex].websiteUrl}
-						className='btns btn-demo'
+						className='btn btn--demo'
 						target='_blank'
 						rel='noreferrer'
 					>
@@ -69,7 +69,7 @@ const ImageSlider = ({ slides }) => {
 
 					<a
 						href={slides[currentIndex].githubUrl}
-						className='btns btn-github'
+						className='btn btn--github'
 						target='_blank'
 						rel='noreferrer'
 					>

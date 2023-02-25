@@ -1,0 +1,91 @@
+@import '../../../mixins.scss';
+
+$lightBlueButtonColor: #5397db;
+$lightRedButtonColor: #ef2958;
+$darkRedButtonColor: #950d32;
+$githubButtonColor: rgb(85, 139, 105);
+
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	padding: 8px 10px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+	transition-property: color, transform, background-color;
+	transition-duration: 0.3s;
+	cursor: pointer;
+
+	&--hire {
+		margin-right: 30px;
+		box-shadow: 0 0 7px 1px $lightBlueButtonColor;
+
+		&:hover {
+			font-weight: 300;
+		}
+	}
+
+	&--download-cv {
+		border: 2px solid $lightRedButtonColor;
+		box-shadow: 0 0 7px 1px $lightRedButtonColor;
+
+		&:hover {
+			font-weight: 300;
+		}
+	}
+
+	&--demo,
+	&--github {
+		font-weight: 500;
+		font-size: 14px;
+		padding: 6px;
+		margin: 10px;
+		border-radius: 5px;
+		text-decoration: none;
+		transition: ease all 0.3s;
+		transform: scale(1);
+		border: none;
+
+		&:hover {
+			color: white;
+
+			@include bp(tablet) {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&--demo {
+		background-color: $lightBlueButtonColor;
+	}
+
+	&--github {
+		background-color: $githubButtonColor;
+	}
+
+	&--submit {
+		background-color: $lightRedButtonColor;
+		padding: 15px 5px;
+		border: none;
+		color: white;
+		transition: ease all 0.3s;
+
+		&:hover {
+			background-color: $darkRedButtonColor;
+		}
+	}
+}
+
+.spinner {
+	animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

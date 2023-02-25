@@ -1,7 +1,7 @@
-import '../Buttons.css';
+import '../Buttons.scss';
 const HireButton = () => {
 	return (
-		<a type='button' href='#contact' className='btns btn-hire-me'>
+		<a type='button' href='#contact' className='btn btn--hire'>
 			HIRE ME
 		</a>
 	);
