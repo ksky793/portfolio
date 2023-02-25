@@ -1,25 +1,36 @@
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { AiOutlineCopyrightCircle } from 'react-icons/ai';
-import './Footer.css';
+import './Footer.scss';
+
 const Footer = () => {
 	return (
 		<footer className='footer' id='footer'>
-			<div className='footer-icons-container'>
-				<a href='https://www.instagram.com/k_a_mc_io/'>
-					<FaInstagram className='ic ic-instagram' />
+			<div className='footer__icons'>
+				<a
+					href='https://www.instagram.com/k_a_mc_io/'
+					className='footer__icon-link'
+				>
+					<FaInstagram className='ic ic--small' />
 				</a>
-				<a href='https://www.linkedin.com/in/kamil-świętochowski-3ba9771b9/'>
-					<FaLinkedin className='ic ic-linkedin' />
+				<a
+					href='https://www.linkedin.com/in/kamil-świętochowski-3ba9771b9/'
+					className='footer__icon-link'
+				>
+					<FaLinkedin className=' ic ic--small' />
 				</a>
-				<a href='https://github.com/ksky793?tab=repositories'>
-					<FaGithub className='ic ic-github' />
+				<a
+					href='https://github.com/ksky793?tab=repositories'
+					className='footer__icon-link'
+				>
+					<FaGithub className='ic ic--small' />
 				</a>
 			</div>
-			<div className='footer-copyright-container'>
-				<AiOutlineCopyrightCircle className='ic ic-copyright' />
-				<h5>2022 Kamil Świętochowski</h5>
+			<div className='footer__copyright m-t--10'>
+				<span className='footer__copyright__icon'>©</span>
+				<h5 className='footer__copyright__text'>2022 Kamil Świętochowski</h5>
 			</div>
-			<p className='license'>CC Attribution-NonCommercial 4.0 International</p>
+			<p className='footer__license m-t--10'>
+				CC Attribution-NonCommercial 4.0 International
+			</p>
 		</footer>
 	);
 };
