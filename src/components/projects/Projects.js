@@ -17,9 +17,9 @@ const projects = [
 		githubUrl: 'https://github.com/ksky793/portfolio',
 	},
 	{
-		name: 'Ecommerce (in progress)',
+		name: 'Ecommerce',
 		image: ecommerce,
-		websiteUrl: 'https://github.com/ksky793/ecommerce-react-redux-firebase',
+		websiteUrl: 'https://ecommerce-cleaning-products.web.app',
 		githubUrl: 'https://github.com/ksky793/ecommerce-react-redux-firebase',
 	},
 	{
