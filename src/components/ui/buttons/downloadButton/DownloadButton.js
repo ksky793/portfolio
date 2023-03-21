@@ -1,4 +1,4 @@
-import CV from '../../../../assets/cv/CV-Kamil_Świętochowski.pdf';
+import CV from '../../../../assets/cv/CV_KamilŚwiętochowski_2023.pdf';
 const DownloadButton = () => {
 	return (
 		<a
